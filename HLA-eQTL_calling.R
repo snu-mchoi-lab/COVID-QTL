@@ -206,3 +206,8 @@ for(ct in names(cov.all)){
   colnames(temp.t) <- temp$id
   write.table(temp.t, file=paste0('{directory_for_input}/',str_split_fixed(ct,':',2)[1],'_',str_split_fixed(ct,':',2)[2],'_covariate.txt'),col.names=T, row.names=T, sep='\t',quote=F)
 }
+
+
+## 7. convert map and ped file to binary plink file throuth plink
+## 8. sort bed file of phenotype data through bedtools
+## 9. run tensorqtl
