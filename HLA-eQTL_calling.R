@@ -7,7 +7,7 @@ library(Matrix.utils)
 library(preprocessCore)
 library(tibble)
 
-## 1. refine sample list to test 
+## 1. refine sample list to test
 ## 1.0. load HLA allele type table about each individuals 
 ## 1.1. exclude missed or ambiguous alleles and left first 2 fields.
 ## 1.2. remain only alleles from HLA-A, HLA-B, HLA-C, HLA-DPA1, HLA-DPB1, HLA-DQB1, and HLA-DRB1.
