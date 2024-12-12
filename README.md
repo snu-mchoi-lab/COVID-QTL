@@ -4,4 +4,4 @@ For any questions, comments, or issues regarding this code or the analysis, plea
 
 Jeongha Lee, Eun Young Jeon, Liyang Yu
 
-Email: 2018-24837@snu.ac.kr, eunyoung.jeon17@gmail.com, liyang.yu.gr@dartmouth.edu
+Email: 201824837@snu.ac.kr, eunyoung.jeon17@gmail.com, liyang.yu.gr@dartmouth.edu
