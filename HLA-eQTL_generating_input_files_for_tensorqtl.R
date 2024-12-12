@@ -1,4 +1,4 @@
-## 0. required packages
+## 0. Load required libraries
 library(data.table)
 library(stringr)
 library(SingleCellExperiment)
