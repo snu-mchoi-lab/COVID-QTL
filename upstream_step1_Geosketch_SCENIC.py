@@ -63,26 +63,26 @@ lp.create( f_loom_path_scenic, adata.scenic.sketch.X.transpose(), row_attrs, col
 
 ## 3. run pySENIC in docker
 ## docker run -it --rm -v {path_to_working_directory}:/mnt/workspace \
-            --name {docker_name} aertslab/pyscenic:0.12.1 pyscenic grn \
-            --num_workers 30 -o /mnt/workspace/{path_to_output_directory}/expr_mat.adjacencies.tsv \
-              /mnt/workspace/{path_to_output_directory}/{sketch_scRNA_raw}.loom \
-              /mnt/workspace/{path_to_provided_reference_by_SCENIC}/allTFs_hg38.txt
+##            --name {docker_name} aertslab/pyscenic:0.12.1 pyscenic grn \
+##            --num_workers 30 -o /mnt/workspace/{path_to_output_directory}/expr_mat.adjacencies.tsv \
+##              /mnt/workspace/{path_to_output_directory}/{sketch_scRNA_raw}.loom \
+##              /mnt/workspace/{path_to_provided_reference_by_SCENIC}/allTFs_hg38.txt
 
 ## docker run -it --rm \
-    -v {path_to_working_directory}:/mnt/workspace --name {docker_name} aertslab/pyscenic:0.12.1 pyscenic ctx \
-        /mnt/workspace/{path_to_output_directory}/expr_mat.adjacencies.tsv \
-        /mnt/workspace/{path_to_provided_reference_by_SCENIC}/hg38__refseq-r80__500bp_up_and_100bp_down_tss.mc9nr.genes_vs_motifs.rankings.feather \
-        /mnt/workspace/{path_to_provided_reference_by_SCENIC}/hg38__refseq-r80__10kb_up_and_down_tss.mc9nr.genes_vs_motifs.rankings.feather \
-        --annotations_fname /mnt/workspace/{path_to_provided_reference_by_SCENIC}/motifs-v9-nr.hgnc-m0.001-o0.0.tbl \
-        --expression_mtx_fname /mnt/workspace/{path_to_output_directory}/{sketch_scRNA_raw}.loom \
-        --mask_dropouts \
-        --output /mnt/workspace/{path_to_output_directory}/{regulons}.csv \
-        --num_workers 35
+##    -v {path_to_working_directory}:/mnt/workspace --name {docker_name} aertslab/pyscenic:0.12.1 pyscenic ctx \
+##        /mnt/workspace/{path_to_output_directory}/expr_mat.adjacencies.tsv \
+##        /mnt/workspace/{path_to_provided_reference_by_SCENIC}/hg38__refseq-r80__500bp_up_and_100bp_down_tss.mc9nr.genes_vs_motifs.rankings.feather \
+##        /mnt/workspace/{path_to_provided_reference_by_SCENIC}/hg38__refseq-r80__10kb_up_and_down_tss.mc9nr.genes_vs_motifs.rankings.feather \
+##        --annotations_fname /mnt/workspace/{path_to_provided_reference_by_SCENIC}/motifs-v9-nr.hgnc-m0.001-o0.0.tbl \
+##        --expression_mtx_fname /mnt/workspace/{path_to_output_directory}/{sketch_scRNA_raw}.loom \
+##        --mask_dropouts \
+##        --output /mnt/workspace/{path_to_output_directory}/{regulons}.csv \
+##        --num_workers 35
 
 ## docker run -it --rm \
-    -v {path_to_working_directory}:/mnt/workspace --name {docker_name} aertslab/pyscenic:0.12.1 pyscenic aucell \
-        /mnt/workspace/{path_to_output_directory}/{sketch_scRNA_raw}.loom\
-        mnt/workspace/{path_to_output_directory}/{regulons}.csv \
-        -o /mnt/workspace/{path_to_output_directory}/{pyscenic.output}.loom \
-        --num_workers 35
+##    -v {path_to_working_directory}:/mnt/workspace --name {docker_name} aertslab/pyscenic:0.12.1 pyscenic aucell \
+##        /mnt/workspace/{path_to_output_directory}/{sketch_scRNA_raw}.loom\
+##        mnt/workspace/{path_to_output_directory}/{regulons}.csv \
+##        -o /mnt/workspace/{path_to_output_directory}/{pyscenic.output}.loom \
+##        --num_workers 35
 
